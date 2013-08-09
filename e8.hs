@@ -6,5 +6,10 @@ digits = map digitToInt $ show num
 five (x:y:z:p:q:xs) = max (x*y*z*p*q) (five (y:z:p:q:xs))
 five (x) = 1
 
+fibo :: Int -> Int -> Int
+fibo a b = a + fibo (b a+b)
+map (\x -> x * 2) $ fibo 1 1
+
+
 res8 = five digits
 

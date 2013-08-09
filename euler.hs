@@ -34,4 +34,7 @@ prime num = foldl1 (&&) $ map (\x -> mod num x /= 0) [2..(round $ sqrt $ fromInt
 prime' num = all (\x -> mod num x /= 0) $ takeWhile (\n -> n^2 <= num) (2:[3,5..])
 e7 = last $ take 10001 $ filter prime' (2:[3,5..])
 
+{- euler 16 -}
+sum (map (\x -> read [x]::Int) (show (2^1000)))
+
 
